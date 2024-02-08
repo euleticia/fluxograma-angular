@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-fluxo-component',
   templateUrl: './fluxo-component.component.html',
+  imports: [CommonModule],
+  standalone: true,
   styleUrl: './fluxo-component.component.scss'
 })
+
 export class FluxoComponent {
   formas: string[] = ['Quadrado', 'Triângulo'];
   fluxograma: string[] = [];
