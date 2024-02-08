@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="formas-container">
+      <div class="forma" *ngFor="let forma of formas" (dragstart)="onDragStart($event, forma)" draggable="true">{{ forma }}</div>
+    </div>
+    <div class="fluxograma-container" (drop)="onDrop($event)" (dragover)="allowDrop($event)">
+      <div class="forma" *ngFor="let forma of fluxograma">
+        {{ forma }}
+        <button (click)="removeItem(forma)">Excluir</button>
+      </div>
+    </div>
+  </div>
